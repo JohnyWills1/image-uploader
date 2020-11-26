@@ -20,7 +20,13 @@ export default function Home() {
 			<main className={styles.main}>
 				<h2 className={styles.uploadTitle}>Upload your image</h2>
 				<p className={styles.uploadDesc}>File should be '.jpeg' or '.png'...</p>
-				<div className={styles.imageUploadSection}>
+				<div
+					className={styles.imageUploadSection}
+					onDragEnter={() => console.log('Drag Enter')}
+					onDragLeave={() => console.log('Drag Leave')}
+					onDragOver={() => console.log('Drag Over')}
+					onDrop={() => console.log('Drop')}
+				>
 					<Image src='/image.svg' height='88px' width='114px' />
 					<p className={styles.imageUploadText}>Drag & Drop your image here</p>
 				</div>
